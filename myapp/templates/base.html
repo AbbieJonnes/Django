@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Document {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}"></links>
+</head>
+<body>
+    <div>
+         <nav>
+            <a href="{% url 'welcome' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+    </div>
+
+    {% block content %}
+    <!-- Content specific to the child-->
+
+    {% endblock %}
+
+    <div>
+        <footer>Created by Abbie Jonnes</footer>
+    </div>
+</body>
+</html>
